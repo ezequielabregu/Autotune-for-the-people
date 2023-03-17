@@ -1,0 +1,16 @@
+<body style="background-color:darkcyan;"> 
+<h3>File uploaded successfully</h3>
+<p>File Name: {{name}}</p>
+<h4>Download your file</h4>
+<p>
+   <a class="btn btn-success" href="{{url_for('download_file')}}">Download</a>
+</p>
+<p>
+   <audio controls>
+      <source src="/static/output.wav"/>
+    </audio>
+</p>
+&nbsp;
+<p>
+   <button onclick="window.location.href = '/';">Try again!</button>
+</p>

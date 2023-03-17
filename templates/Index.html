@@ -1,0 +1,31 @@
+
+<html>
+    <body style="background-color:darkcyan;">      
+<head>  
+    <title>upload the file : GFG</title>  
+</head>
+<h2> Autotune for the people </h2>
+<p> 1. Upload your audio file </p>    
+<body>  
+    <form action = "/success" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+
+&nbsp;      
+<p> 2. Choose the key </p>  
+    <select name="key_select" class="Input">
+        {% for o in data %}
+        <option value="{{ o.key }}">{{ o.key }}</option>
+        {% endfor %}
+    </select>
+&nbsp;    
+<p> 3. Choose the mode </p>  
+    <select name="mode_select" class="Input">
+        {% for o in data1 %}
+        <option value="{{ o.mode }}">{{ o.mode }}</option>
+        {% endfor %}
+    </select>
+    
+    </form>
+</body>  
+</html>
