@@ -2,5 +2,5 @@ Flask==2.2.3
 librosa==0.10.0
 numpy==1.21.6
 psola==0.0.1
-scipy==1.10.1
+scipy==1.1.0
 soundfile==0.12.1
