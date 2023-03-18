@@ -45,7 +45,7 @@ def success():
         #run autotune main function
         main_at(f.filename)
         #remove audio after get the optput.wav
-        #os.remove(f.filename)
+        os.remove(f.filename)
         return render_template("acknowledgement.html", name = f.filename)
    
 #file downloader
@@ -141,8 +141,8 @@ def main_at(audio_input):
     #sf.write(str(output_filepath), pitch_corrected_y, sr)
 
 if __name__ == '__main__':
-    app.run()
-#    app.run(host="0.0.0.0", port=10000)
+#    app.run()
+    app.run(host="0.0.0.0", port=10000)
 #    app.run(debug=False)    
 #    app.run(debug=True)
         
