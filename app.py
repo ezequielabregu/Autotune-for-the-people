@@ -45,7 +45,7 @@ def success():
         #run autotune main function
         main_at(f.filename)
         #remove audio after get the optput.wav
-        os.remove(f.filename)
+        #os.remove(f.filename)
         return render_template("acknowledgement.html", name = f.filename)
    
 #file downloader
