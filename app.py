@@ -14,7 +14,7 @@ import os
 #audio_input = "voice.wav"
 #key = 'C:min' 
  
-app = Flask(__name__)  
+app = Flask(__name__, template_folder='templates')  
 
 #global filename
 def fname():
