@@ -46,7 +46,7 @@ def success():
         main_at(f.filename)
         #remove audio after get the optput.wav
         os.remove(f.filename)
-        return render_template("Acknowledgement.html", name = f.filename)
+        return render_template("acknowledgement.html", name = f.filename)
    
 #file downloader
 @app.route('/download', methods = ['GET'])
