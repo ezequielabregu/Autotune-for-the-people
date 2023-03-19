@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <body style="background-color:darkcyan;">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <body style="background-color:darkcyan;"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    h1{color: darkslategray;}
+    h2{color:darkslategrey;}
+    p{color:lightblue;}
+    </style>      
 <head>  
-    <title>upload the file : GFG</title>  
+
+    <style>
+    body  {
+    background-image: url('static/background-1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: 100% 100%;
+    }
+        </style>
+
+    <title>Autotune4people</title>  
 </head>
-<h2> Autotune for the people </h2>
-<p> 1. Upload your audio file </p>    
+<h2> Autotune4people </h2>
+<p> 1. Select an audio file </p>    
 <body>  
     <form action = "/success" method = "post" enctype="multipart/form-data">  
         <input type="file" name="file" />  
-        <input type = "submit" value="Upload">  
+
 
 &nbsp;      
-<p> 2. Choose the key </p>  
+<p> 2. Select your key </p>  
     <select name="key_select" class="Input">
         {% for o in data %}
         <option value="{{ o.key }}">{{ o.key }}</option>
         {% endfor %}
     </select>
 &nbsp;    
-<p> 3. Choose the mode </p>  
+<p> 3. Scale mode </p>  
     <select name="mode_select" class="Input">
         {% for o in data1 %}
         <option value="{{ o.mode }}">{{ o.mode }}</option>
         {% endfor %}
     </select>
-    
+<p> 4. Upload audio </p>    
+    <input type = "submit" value="Upload">      
     </form>
+
 </body>  
 </html>

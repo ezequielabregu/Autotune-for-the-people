@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
    <body style="background-color:darkcyan;">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<h3>File uploaded successfully</h3>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      h1{color: darkslategray;}
+      h2{color:darkslategrey;}
+      p{color:lightblue;}
+      </style>  
+<!-- image background-->
+<style>
+      body  {
+      background-image: url('static/background-2.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: 100% 100%;
+      }
+          </style>    
+<h2>File uploaded successfully</h2>
 <p>File Name: {{name}}</p>
-<h4>Download your file</h4>
+<p>Download your file</p>
 <p>
    <a class="btn btn-success" href="{{url_for('download_file')}}">Download</a>
 </p>
