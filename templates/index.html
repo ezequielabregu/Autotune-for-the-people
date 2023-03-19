@@ -3,15 +3,15 @@
     <body style="background-color:darkcyan;"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    h1{color: darkslategray;}
-    h2{color:darkslategrey;}
+    h1{color: rgb(179, 208, 208);}
+    h2{color:rgb(179, 208, 208);}
     p{color:lightblue;}
     </style>      
 <head>  
 
     <style>
     body  {
-    background-image: url('static/background-1.png');
+    background-image: url('static/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: 100% 100%;
@@ -21,14 +21,14 @@
     <title>Autotune4people</title>  
 </head>
 <h2> Autotune4people </h2>
-<p> 1. Select an audio file </p>    
+<p> 1. Select audio file </p>    
 <body>  
     <form action = "/success" method = "post" enctype="multipart/form-data">  
         <input type="file" name="file" />  
 
 
 &nbsp;      
-<p> 2. Select your key </p>  
+<p> 2. Select key </p>  
     <select name="key_select" class="Input">
         {% for o in data %}
         <option value="{{ o.key }}">{{ o.key }}</option>
@@ -42,7 +42,7 @@
         {% endfor %}
     </select>
 <p> 4. Upload audio </p>    
-    <input type = "submit" value="Upload">      
+    <input style="background-color:rgb(206, 147, 147)" type = "submit" value="Upload">      
     </form>
 
 </body>  
