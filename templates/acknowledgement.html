@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html>
-   <body style="background-color:darkcyan;">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-      h1{color: rgb(179, 208, 208);}
-      h2{color:rgb(179, 208, 208);}
-      p{color:lightblue;}
-      </style>   
-<!-- image background-->
-<style>
-      body  {
-      background-image: url('static/background.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;  
-      background-size: 100% 100%;
+  <body style="background-color: darkcyan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h1, h2, p {
+        color: rgb(179, 208, 208);
       }
-          </style>    
-<h2>File uploaded successfully</h2>
-<p>File Name: {{name}}</p>
-<p>Download your file</p>
-<p>
-   <a class="btn btn-success" href="{{url_for('download_file')}}">Download</a>
-</p>
-<p>
-   <audio controls>
-      <source src="/static/output.wav"/>
-    </audio>
-</p>
-&nbsp;
-<p>
-   <button style="background-color: rgb(206, 147, 147);" onclick="window.location.href = '/';">Try again!</button>
-</p>
-</body>  
+    </style>
+
+<!-- image background-->
+    <style>
+      body {
+        background-image: url("static/background.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+    </style>
+    <h2>File uploaded successfully</h2>
+    <p>File Name: {{name}}</p>
+    <p>Download your file</p>
+    <p>
+      <a class="btn btn-success" href="{{url_for('download_file')}}"
+        >Download</a
+      >
+    </p>
+    <p>
+      <audio controls>
+        <source src="/static/output.wav" />
+      </audio>
+    </p>
+    &nbsp;
+    <p>
+      <button
+        style="background-color: rgb(206, 147, 147)"
+        onclick="window.location.href = '/';"
+      >
+        Try again!
+      </button>
+    </p>
+  </body>
 </html>
