@@ -1,6 +1,6 @@
 from distutils.log import debug
 from fileinput import filename
-from flask import *  # Flask, send_file, render_template, request
+from flask import *
 
 import librosa
 from pathlib import Path
@@ -167,6 +167,6 @@ def main_at(audio_input):
 
 
 if __name__ == "__main__":
-    #    app.run()
+        app.run()
     #    app.run(host="0.0.0.0", port=10000)
-    app.run(debug=True)
+    #app.run(debug=True)

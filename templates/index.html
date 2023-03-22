@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <body style="background-color:darkcyan;"> 
+    <body style="background-color:#343148FF;"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      h1, h2, p {
-        color: rgb(179, 208, 208);
-      }
-    </style>      
+        @font-face {
+        font-family: 'JetBrains';
+        src: url('/static/JetBrainsMono-Regular.ttf');
+        font-weight: normal;
+        } 
+        h1, h2, p {
+          color: #D7C49EFF;      
+        }
+        </style>      
 <head>  
 
     <style>
@@ -15,34 +20,35 @@
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: 100% 100%;
+    font-family: 'JetBrains', sans-serif;
     }
         </style>
 
     <title>Autotune for people</title>  
 </head>
-<h2> Autotune for people </h2>
+<h1> Autotune for people </h1>
+&nbsp;
 <p> 1. Select audio file </p>    
 <body>  
-    <form action = "/success" method = "post" enctype="multipart/form-data">  
-        <input type="file" name="file" />  
-
+    <form action = "/success" method = "post" enctype="multipart/form-data">
+        <input type="file" style="font-family: JetBrains; background-color:#D7C49EFF" name="file" />  
 
 &nbsp;      
 <p> 2. Select key </p>  
-    <select name="key_select" class="Input">
+    <select name="key_select" class="Input" style="font-family: JetBrains">
         {% for o in data %}
         <option value="{{ o.key }}">{{ o.key }}</option>
         {% endfor %}
     </select>
 &nbsp;    
 <p> 3. Scale mode </p>  
-    <select name="mode_select" class="Input">
+    <select name="mode_select" class="Input" style="font-family: JetBrains">
         {% for o in data1 %}
         <option value="{{ o.mode }}">{{ o.mode }}</option>
         {% endfor %}
     </select>
 <p> 4. Upload audio </p>    
-    <input style="background-color:rgb(206, 147, 147)" type = "submit" value="Upload">      
+    <input style="background-color:#D7C49EFF; font-family: JetBrains;" type = "submit" value="Upload">      
     </form>
 
 </body>  
