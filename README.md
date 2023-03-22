@@ -5,17 +5,8 @@ A simple, free Autotune web app implemented in Flask &amp; Python.
 Pitch correction effects are used to tune signals that are slightly out of key.\
 Perhaps the most useful on vocal tracks, but can be used on anything!
 
-#### Original audio
-
-<audio controls>
-        <source src="/static/voice.wav">
-    </audio>
-
-#### Pitch corrected
-
-<audio controls>
-        <source src="/static/voice_corrected.wav">
-    </audio>
+Online demo:
+[https://autotune4people.onrender.com/](https://autotune4people.onrender.com/)
 
 ## How to run
 
