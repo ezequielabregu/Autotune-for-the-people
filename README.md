@@ -5,7 +5,7 @@ A simple, free Autotune web app implemented in Flask &amp; Python.
 Pitch correction effects are used to tune signals that are slightly out of key.\
 Perhaps the most useful on vocal tracks, but can be used on anything!
 
-Online demo:
+**Online demo**:
 [https://autotune4people.onrender.com/](https://autotune4people.onrender.com/)
 
 ## How to run
@@ -21,4 +21,4 @@ Web browser address:\
 [127.0.0.1:5000](http://127.0.0.1:5000/)
 
 &nbsp;
-![](/static/autotune4people.gif)
+![Autotune for people in action](/static/autotune4people.gif)
