@@ -6,7 +6,7 @@ Pitch correction effects are used to tune signals that are slightly out of key.\
 Perhaps the most useful on vocal tracks, but can be used on anything!
 
 **Online demo**:
-[https://autotune4people.onrender.com/](https://autotune4people.onrender.com/)
+[https://a4p.ezequielabregu.com/](https://a4p.ezequielabregu.com/)
 
 ## How to run
 

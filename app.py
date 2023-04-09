@@ -10,8 +10,8 @@ import numpy as np
 import scipy.signal as sig
 import os
 
-# audio_input = "voice.wav"
-# key = 'C:min'
+server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
+print(server_path)
 
 app = Flask(__name__)  # , template_folder='templates')
 
@@ -167,6 +167,6 @@ def main_at(audio_input):
 
 
 if __name__ == "__main__":
-    app.run()
-#   app.run(host="0.0.0.0", port=10000)
+    app.run(host="0.0.0.0", port=5000)
+#    app.run()
 #   app.run(debug=True)
