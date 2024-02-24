@@ -10,6 +10,9 @@ Perhaps the most useful on vocal tracks, but can be used on anything!
 **Online demo**:
 [https://a4p.ezequielabregu.com/](https://a4p.ezequielabregu.com/)
 
+&nbsp;
+![Autotune for people in action](/static/autotune4people.gif)
+
 ## How to run
 
 ```bash
@@ -19,8 +22,16 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Web browser address:\
-[127.0.0.1:5000](http://127.0.0.1:5000/)
+Then, open your web browser and navigate to [127.0.0.1:5000](http://127.0.0.1:5000/)
 
-&nbsp;
-![Autotune for people in action](/static/autotune4people.gif)
+## Usage
+
+Upload an audio file and select the key and mode for autotuning. The application will process the audio and provide a download link for the autotuned audio.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the terms of the MIT license.
