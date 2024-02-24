@@ -1,6 +1,6 @@
-# A4F
+# A4P
 
-## Autotune for people
+## Autotune for People
 
 A simple, free Autotune web app implemented in Flask &amp; Python.
 
