@@ -1,6 +1,9 @@
 from distutils.log import debug
 from fileinput import filename
 from flask import *
+import os
+
+#os.environ['NUMBA_CACHE_DIR'] = '/var/www/html/apps/autotune/uploads'
 
 import librosa
 from pathlib import Path
@@ -8,7 +11,7 @@ import soundfile as sf
 import psola
 import numpy as np
 import scipy.signal as sig
-import os
+
 
 server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
 ##print("ABSOLUTE SERVER PATH:" + server_path)
@@ -75,7 +78,8 @@ def output():
 # file downloader
 @app.route("/download", methods=["GET"])
 def download_file():
-    return send_file("static/output.wav", as_attachment=True)
+    return send_file(os.path.join(server_path,'static','output.wav'), as_attachment=True)
+    #return send_file("static/output.wav", as_attachment=True)
 
 
 # audio player
@@ -167,7 +171,8 @@ def main_at(audio_input):
         filepath.stem + "_pitch_corrected" + filepath.suffix
     )
     # 5) soundfile lib ---> .write the file pitch corrected
-    sf.write("static/output.wav", pitch_corrected_y, sr)
+    sf.write(os.path.join(server_path,'static','output.wav'), pitch_corrected_y, sr)
+    #sf.write("static/output.wav", pitch_corrected_y, sr)
     # sf.write(str(output_filepath), pitch_corrected_y, sr)
 
 print(os.getcwd())
