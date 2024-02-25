@@ -10,8 +10,8 @@ import numpy as np
 import scipy.signal as sig
 import os
 
-server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
-print(server_path)
+server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
+##print("ABSOLUTE SERVER PATH:" + server_path)
 
 app = Flask(__name__)  # , template_folder='templates')
 
@@ -58,12 +58,13 @@ def main():
 def success():
     if request.method == "POST":
         f = fname()
+        print("ABSOLUTE SERVER PATH:" + os.path.join(server_path, 'uploads', f.filename))
         # f = request.files['file']
-        f.save(os.path.join('uploads', f.filename))
+        f.save(os.path.join(server_path,'uploads', f.filename))
         # run autotune main function
-        main_at(os.path.join('uploads', f.filename))
+        main_at(os.path.join(server_path,'uploads', f.filename))
         # remove audio after get the optput.wav
-        os.remove(os.path.join('uploads', f.filename))
+        os.remove(os.path.join(server_path,'uploads', f.filename))
         return render_template("output.html", name=f.filename)
 
 
