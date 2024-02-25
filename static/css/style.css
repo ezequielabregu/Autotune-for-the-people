@@ -16,7 +16,11 @@ p {
     color: #D7C49EFF ;
 }
 
-
+.description {
+    color: #D7C49EFF;
+    font-family: JetBrains;
+    font-size: 14px;
+}
 
 /* .Input {
     font-family: JetBrains;
@@ -43,3 +47,6 @@ p {
     background-color: #D7C49EFF;
     font-family: JetBrains;
 }
+
+/*--------------------------------------------------------------------------------------------*/
+

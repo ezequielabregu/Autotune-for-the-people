@@ -36,18 +36,22 @@
                     {% endfor %}
                 </select>
             </div>
+            
             <div class="col-sm-3 mt-4"> 
                 <p class="fs-5"> 3. Upload audio </p>
-                <input type="submit" value="Upload">
+                <input id="uploadButton" class="btn btn-secondary" type="submit" value="Upload">
                 </form>
             </div>
+
             <div class="col-sm-3 mt-4"> 
-                <p class="fs-6">
+                <p class="description">
                 A4P (Autotune for People) is free. Pitch correction effects are used to tune signals that are slightly out of key. Perhaps the most useful on vocal tracks, but can be used on anything!
                 </p>
             </div>
         </div>
     </div>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../static/js/scripts.js"></script>
     <script src="../static/js/bootstrap.bundle.js"></script>
 </body>

@@ -67,6 +67,10 @@ def success():
         return render_template("output.html", name=f.filename)
 
 
+@app.route("/output")
+def output():
+    return render_template("output.html")
+
 # file downloader
 @app.route("/download", methods=["GET"])
 def download_file():

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing</title>
+</head>
+<body>
+    <h1>Processing!</h1>
+    <p>Your audio is processing</p>
+
+    <script>
+        function checkStatus() {
+            fetch('/check_status')
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    window.location.href = '/output';
+                } else {
+                    setTimeout(checkStatus, 5000); // Check again in 5 seconds
+                }
+            });
+        }
+        checkStatus(); // Start checking immediately
+    </script>
+</body>
+</html>
