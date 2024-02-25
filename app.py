@@ -59,11 +59,11 @@ def success():
     if request.method == "POST":
         f = fname()
         # f = request.files['file']
-        f.save(f.filename)
+        f.save(os.path.join('uploads', f.filename))
         # run autotune main function
-        main_at(f.filename)
+        main_at(os.path.join('uploads', f.filename))
         # remove audio after get the optput.wav
-        os.remove(f.filename)
+        os.remove(os.path.join('uploads', f.filename))
         return render_template("output.html", name=f.filename)
 
 
