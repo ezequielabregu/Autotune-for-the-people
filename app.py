@@ -58,12 +58,12 @@ def main():
 def success():
     if request.method == "POST":
         f = fname()
-        server_path = os.path.dirname(os.path.realpath(__file__))
-        upload_path = os.path.join(server_path, 'uploads', f.filename)
-        print(upload_path)
-        f.save(upload_path)
-        main_at(upload_path)
-        os.remove(upload_path)
+        # f = request.files['file']
+        f.save(os.path.join('uploads', f.filename))
+        # run autotune main function
+        main_at(os.path.join('uploads', f.filename))
+        # remove audio after get the optput.wav
+        os.remove(os.path.join('uploads', f.filename))
         return render_template("output.html", name=f.filename)
 
 
