@@ -79,7 +79,7 @@ def output():
 # file downloader
 @app.route("/download", methods=["GET"])
 def download_file():
-    return send_file("static/audio/output.wav", as_attachment=True)
+    return send_file(os.path.join(server_path,'uploads', 'output.wav'), as_attachment=True)
 
 
 # audio player
@@ -171,7 +171,7 @@ def main_at(audio_input):
         filepath.stem + "_pitch_corrected" + filepath.suffix
     )
     # 5) soundfile lib ---> .write the file pitch corrected
-    sf.write("static/audio/output.wav", pitch_corrected_y, sr)
+    sf.write(os.path.join(server_path,'uploads', 'output.wav'), pitch_corrected_y, sr)
     # sf.write(str(output_filepath), pitch_corrected_y, sr)
 
 print(os.getcwd())
