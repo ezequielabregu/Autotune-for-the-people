@@ -3,7 +3,12 @@ from fileinput import filename
 from flask import *
 import os
 
+server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
+##print("ABSOLUTE SERVER PATH:" + server_path)
+
+# Change the default cache directory for NUMBA (part of librosa)
 #os.environ['NUMBA_CACHE_DIR'] = '/var/www/html/apps/autotune/uploads'
+os.environ['NUMBA_CACHE_DIR'] = os.path.join(server_path,'uploads')
 
 import librosa
 from pathlib import Path
@@ -11,10 +16,6 @@ import soundfile as sf
 import psola
 import numpy as np
 import scipy.signal as sig
-
-
-server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
-##print("ABSOLUTE SERVER PATH:" + server_path)
 
 app = Flask(__name__)  # , template_folder='templates')
 
