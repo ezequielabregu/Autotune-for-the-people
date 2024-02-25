@@ -64,7 +64,7 @@ def success():
         main_at(f.filename)
         # remove audio after get the optput.wav
         os.remove(f.filename)
-        return render_template("acknowledgement.html", name=f.filename)
+        return render_template("output.html", name=f.filename)
 
 
 # file downloader
@@ -167,6 +167,6 @@ def main_at(audio_input):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
-#    app.run()
-#    app.run(debug=True)
+#    app.run(host="0.0.0.0", port=5000)
+    app.run()
+    app.run(debug=True)

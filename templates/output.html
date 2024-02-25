@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <title>File Uploaded Successfully</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-fluid mt-3 bg-dark text-white">
+    <h2>File uploaded successfully</h2>
+    </div>
+    <div class="container-fluid mt-3 text-white custom-bg">
+        <div class="row mt-5">
+            <div class="col-sm-6 mt-4">    
+                <p>File Name: {{name}}</p>
+            </div>
+            <div class="col-sm-6 mt-4"> 
+                <p>Download your autotuned audio</p>
+                <p>
+                    <a class="btn btn-outline-success mt-4" href="{{url_for('download_file')}}">Download</a>
+                </p>
+                <p>
+                    <audio controls class="mt-4">
+                        <source src="/static/output.wav" />
+                    </audio>
+                </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <p>
+                <button class="btn btn-outline-primary" onclick="window.location.href = '/';">Try again!</button>
+            </p>
+        </div>
+    </div>
+    <script src="../static/js/scripts.js"></script>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+</body>
+</html>

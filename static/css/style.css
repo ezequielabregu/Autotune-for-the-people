@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'JetBrains';
+    src: url('../JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #343148FF;
+    background-image: url('../background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'JetBrains Mono', sans-serif !important;
+}
+
+p {
+    color: #D7C49EFF ;
+}
+
+
+
+/* .Input {
+    font-family: JetBrains;
+    background-color: #D7C49EFF;
+} */
+
+.custom-bg {
+    background-color: rgba(0, 0, 0, 0.6); /* black with 50% opacity */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.btn-success {
+    background-color: #D7C49EFF;
+}
+
+.try-again-btn {
+    background-color: #D7C49EFF;
+    font-family: JetBrains;
+}

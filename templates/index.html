@@ -1,62 +1,54 @@
 <!DOCTYPE html>
-<html>
-    <body style="background-color:#343148FF;"> 
+<!-- activate DARK mode https://getbootstrap.com/docs/5.3/customize/color-modes/ -->
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @font-face {
-        font-family: 'JetBrains';
-        src: url('/static/JetBrainsMono-Regular.ttf');
-        font-weight: normal;
-        } 
-        h1, h2, p {
-          color: #D7C49EFF;      
-        }
-        </style>      
-<head>  
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <title>Autotune for people</title>
 
-    <style>
-    body  {
-    background-image: url('/static/background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: 100% 100%;
-    font-family: 'JetBrains', sans-serif;
-    }
-        </style>
-
-    <title>Autotune for people</title>  
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
 </head>
-<h1> A4P </h1>
-&nbsp;
-<p> 1. Select audio file </p>    
-<body>  
-    <form action = "/success" method = "post" enctype="multipart/form-data">
-        <input type="file" style="font-family: JetBrains; background-color:#D7C49EFF" name="file" />  
-
-&nbsp;      
-<p> 2. Select key </p>  
-    <select name="key_select" class="Input" style="font-family: JetBrains">
-        {% for o in data %}
-        <option value="{{ o.key }}">{{ o.key }}</option>
-        {% endfor %}
-    </select>
-&nbsp;    
-<p> 3. Scale mode </p>  
-    <select name="mode_select" class="Input" style="font-family: JetBrains">
-        {% for o in data1 %}
-        <option value="{{ o.mode }}">{{ o.mode }}</option>
-        {% endfor %}
-    </select>
-<p> 4. Upload audio </p>    
-    <input style="background-color:#D7C49EFF; font-family: JetBrains;" type = "submit" value="Upload">      
-    </form>
-&nbsp;
-&nbsp;
-<p style="font-size:80%; text-align:right">
-A4P (Autotune for People) is free.<br>    
-Pitch correction effects are used to tune<br> 
-signals that are slightly out of key.<br> 
-Perhaps the most useful on vocal tracks,<br> 
-but can be used on anything!</p>
-</body>  
+<body>
+    <div class="container-fluid mt-3 bg-dark text-white">
+        <h1 class="text-center"> A4P</h1>
+        <h4 class="text-center"> Autotune for People</h4>
+    </div>
+    <div class="container-fluid mt-3 text-white custom-bg">
+        <div class="row mt-5">
+            <div class="col-sm-3 mt-4">    
+                <p class="fs-5"> 1. Select audio</p>
+                <form action="/success" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" />
+            </div>
+            <div class="col-sm-3 mt-4"> 
+                <p class="fs-4"> 2. Key </p>
+                <select name="key_select" class="Input">
+                    {% for o in data %}
+                    <option value="{{ o.key }}">{{ o.key }}</option>
+                    {% endfor %}
+                </select>
+                <p> </p>
+                <p class="fs-5"> Scale mode </p>
+                <select name="mode_select" class="Input">
+                    {% for o in data1 %}
+                    <option value="{{ o.mode }}">{{ o.mode }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-sm-3 mt-4"> 
+                <p class="fs-5"> 3. Upload audio </p>
+                <input type="submit" value="Upload">
+                </form>
+            </div>
+            <div class="col-sm-3 mt-4"> 
+                <p class="fs-6">
+                A4P (Autotune for People) is free. Pitch correction effects are used to tune signals that are slightly out of key. Perhaps the most useful on vocal tracks, but can be used on anything!
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/scripts.js"></script>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+</body>
 </html>
