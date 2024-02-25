@@ -169,7 +169,7 @@ def main_at(audio_input):
     sf.write("static/output.wav", pitch_corrected_y, sr)
     # sf.write(str(output_filepath), pitch_corrected_y, sr)
 
-
+print(os.getcwd())
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 #    app.run()
