@@ -2,8 +2,6 @@ from distutils.log import debug
 from fileinput import filename
 from flask import *
 import os
-import glob
-
 
 server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
 ##print("ABSOLUTE SERVER PATH:" + server_path)
