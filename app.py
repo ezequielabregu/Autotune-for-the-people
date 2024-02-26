@@ -2,6 +2,8 @@ from distutils.log import debug
 from fileinput import filename
 from flask import *
 import os
+import glob
+
 
 server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
 ##print("ABSOLUTE SERVER PATH:" + server_path)
@@ -176,7 +178,6 @@ def main_at(audio_input):
     sf.write(os.path.join(server_path,'static','audio', 'output.wav'), pitch_corrected_y, sr)
     # sf.write(str(output_filepath), pitch_corrected_y, sr)
 
-print(os.getcwd())
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 #    app.run()
