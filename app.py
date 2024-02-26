@@ -7,10 +7,10 @@ server_path= os.path.realpath(os.path.join(os.path.dirname(__file__), '.'))
 ##print("ABSOLUTE SERVER PATH:" + server_path)
 
 # Change the default cache directory for NUMBA (part of librosa)
-#os.environ['NUMBA_CACHE_DIR'] = os.path.join(server_path,'uploads')
+os.environ['NUMBA_CACHE_DIR'] = os.path.join(server_path,'cache')
 
 # Disable NUMBA Caching (i leave leftovers in the /tmp folder). For Caching active, use the above line
-os.environ['NUMBA_DISABLE_JIT'] = '1'
+#os.environ['NUMBA_DISABLE_JIT'] = '1'
 
 import librosa
 from pathlib import Path
