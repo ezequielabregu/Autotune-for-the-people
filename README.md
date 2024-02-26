@@ -32,6 +32,20 @@ Upload an audio file and select the key and mode for autotuning. The application
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Folder permissions
+
+Ensure that `forlder-permissions.sh` has execute permissions,
+
+```bash
+sudo chmod +x folder_permissions.sh
+```
+
+and execute the script
+
+```bash
+./folder_permissions.sh
+```
+
 ## License
 
 This project is licensed under the terms of the MIT license.
