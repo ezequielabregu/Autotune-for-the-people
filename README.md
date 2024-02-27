@@ -46,6 +46,16 @@ and execute the script
 ./folder_permissions.sh
 ```
 
+## Caching
+
+Numba (part of Librosa library) uses caching to improve the performance of your code by saving the compiled versions of your functions. This allows Numba to skip the compilation step when you run your code again, which can significantly speed up your code if you're running the same functions multiple times.
+
+However, Numba does not automatically clean up its cache, which can lead to leftover in `cache` folder.
+
+Delete the caching periodically is recommended:
+
+`rm -rf cache/*`
+
 ## License
 
 This project is licensed under the terms of the MIT license.
